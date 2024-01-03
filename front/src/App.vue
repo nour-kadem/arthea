@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
+import Header from '@/Header.vue'
+import Footer from '@/Footer.vue'
+import Home from '@/Home.vue'
 </script>
 
 <template>
   <Header></Header>
+  <Home></Home>
   <Footer></Footer>
 </template>

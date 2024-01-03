@@ -1,0 +1,14 @@
+@use "~/abstracts" as *; 
+
+.leaf {
+  border-top-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+.card {
+  padding: space(4);
+  background-color: $color-normal;
+  display: flex;
+  flex-direction: column;
+  gap: space(2);
+}

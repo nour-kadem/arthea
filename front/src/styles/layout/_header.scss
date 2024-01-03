@@ -4,10 +4,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: space(6) space(20);
+  padding: space(4) space(10);
   
   .logo {
-    font-family: $logo;
+    font-family: $font-logo;
     font-size: 5rem;
     color: #3B565C;
   }
@@ -15,7 +15,7 @@ header {
   nav {
     display: flex;
     gap: space(10);
-    color: $details;
+    color: $color-details;
     font-size: 1.25rem;
   }
 }

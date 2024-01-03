@@ -1,0 +1,31 @@
+@use "~/abstracts" as *;
+
+.home {
+
+  .approach {
+    display: flex;
+
+    .texts, .shapes {
+      flex-basis: 50%;
+    }
+    .shapes {
+      #circle {
+        @include circle(200, $color-details);
+      }
+
+      #line {
+        @include line(5, 200, 0deg, $color-important);
+      }
+
+      #circle2 {
+        @include circle(100, $color-clear-details)
+      }
+    }
+
+    .texts {
+      display: flex;
+      flex-direction: column;
+      gap: space(2);
+    }
+  }
+}

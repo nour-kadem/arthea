@@ -1,0 +1,37 @@
+@use "~/abstracts" as *;
+
+.hero {
+  position: relative;
+  height: 80vh;
+
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+
+    gap: space(4);
+    position: absolute;
+    width: 20vw;
+    bottom: 20%;
+    right: 60%;
+  }
+
+  img {
+    width: 30vw;
+    position: absolute;
+    bottom: 50%;
+    right: 40%;
+    transform: translate(50%, 50%);
+    border-bottom-left-radius: $radius;
+  }
+
+  .semi-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-color: $color-details;
+    border-bottom-left-radius: $radius;
+  }
+}

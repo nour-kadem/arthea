@@ -1,0 +1,21 @@
+/* _________________FUNCTIONS_________________ */
+
+@function space($size) {
+  @return $size * 5px;
+}
+
+/* _________________MIXINS_________________ */
+
+@mixin circle($ray, $color) {
+  width: $ray * 1px;
+  height: $ray * 1px;
+  background-color: $color;
+  border-radius: 100%;
+}
+
+@mixin line($width, $height, $rotation, $color) {
+  width: $width * 1px;
+  height: $height * 1px;
+  transform: rotate($rotation);
+  background-color: $color;
+}
