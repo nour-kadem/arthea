@@ -1,0 +1,21 @@
+@use "~/abstracts" as *;
+
+em {
+  font-family: $font-secondary;
+  font-style: italic;
+}
+
+blockquote {
+  text-align: center;
+  padding-left: space(15);
+  padding-right: space(15);
+
+  em {
+    line-height: 1.5;
+    font-size: 1.25rem;
+  }
+}
+
+p, em {
+  line-height: 1.2;
+}

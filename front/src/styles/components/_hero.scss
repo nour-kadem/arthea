@@ -1,7 +1,6 @@
 @use "~/abstracts" as *;
 
 .hero {
-  position: relative;
   height: 80vh;
 
 
@@ -16,22 +15,31 @@
     right: 60%;
   }
 
-  img {
+  figure {
     width: 30vw;
     position: absolute;
     bottom: 50%;
     right: 40%;
     transform: translate(50%, 50%);
-    border-bottom-left-radius: $radius;
+
+    .main {
+      width: 100%;
+      border-bottom-left-radius: $radius;
+    }
+
+    .side {
+      position: absolute;
+      height: 40%;
+      left: 0;
+      top: space(5);
+      transform: translate(-90%, 0)
+    }
   }
 
-  .semi-background {
-    position: absolute;
+  .rectangle {
+    @include rectangle(40%, 100%, $color-details);
     top: 0;
     right: 0;
-    width: 40%;
-    height: 100%;
-    background-color: $color-details;
     border-bottom-left-radius: $radius;
   }
 }

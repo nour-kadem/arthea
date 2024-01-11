@@ -8,6 +8,7 @@ button {
   background-color: $color-important;
   border: none;
   width: fit-content;
-  padding: space(4) space(3);
+  padding: space(4) space(5);
   font-family: $font-main;
+  cursor: pointer;
 }

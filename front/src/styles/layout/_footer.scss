@@ -6,10 +6,22 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: space(35);
-  gap: space(10);
+  padding: space(15);
+  gap: space(6);
   color: white;
   text-align: center;
+  position: relative;
+
+  &.margined {
+    margin-top: space(40);
+
+    &::before {
+      @include rectangle(20%, 5px, $color-text);
+      content: '';
+      top: space(-30);
+      left: 0;
+    }
+  }
 
   .logo {
     width: 150px;

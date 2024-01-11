@@ -1,0 +1,44 @@
+@use "~/abstracts" as *;
+
+.text-and-shapes {
+
+  display: flex;
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .text,
+  .shapes {
+    flex-basis: 50%;
+  }
+
+  .shapes {
+
+    position: relative;
+
+    .circle {
+      @include circle(200px, $color-details);
+      top: space(-5);
+      left: calc(50% - 100px);
+    }
+
+    .line {
+      @include rectangle(5px, 150px, $color-important);
+      top: space(20);
+      left: 50%;
+    }
+
+    .circle2 {
+      @include circle(100px, $color-clear-details);
+      bottom: space(-10);
+      left: space(10);
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: space(6);
+  }
+}

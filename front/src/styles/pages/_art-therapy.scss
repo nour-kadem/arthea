@@ -1,0 +1,95 @@
+@use "~/abstracts" as *;
+
+.art-therapy {
+  .hero {
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      height: 100%;
+    }
+
+    .card {
+      position: absolute
+    }
+  }
+
+  .definition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: space(6);
+    text-align: center;
+  }
+
+  .circumstances {
+    display: flex;
+    flex-direction: column;
+
+    gap: space(10);
+
+    .circumstance {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: space(10);
+
+      img {
+        width: 250px;
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        gap: space(6);
+      }
+
+      &:nth-of-type(2n) {
+        flex-direction: row;
+      }
+    }
+  }
+
+  .rdv {
+    background-color: $color-bg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: space(6);
+  }
+
+  .qna {
+    display: flex;
+    flex-direction: column;
+    gap: space(6);
+
+    h2 {
+      text-align: center;
+    }
+
+    .couple {
+      display: flex;
+      flex-direction: column;
+      gap: space(4);
+
+      .question {
+        padding: space(4);
+        flex-direction: row;
+        justify-content: space-between;
+        cursor: pointer;
+      }
+      
+      .answer {
+        height: 0;
+        overflow: hidden;
+        transition: height .2s linear;
+
+        &.expanded {
+          height: 200px;
+        }
+      }
+
+    }
+  }
+}

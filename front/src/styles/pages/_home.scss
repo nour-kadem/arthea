@@ -5,27 +5,132 @@
   .approach {
     display: flex;
 
-    .texts, .shapes {
+    .texts,
+    .shapes {
       flex-basis: 50%;
     }
+
     .shapes {
-      #circle {
-        @include circle(200, $color-details);
+
+      position: relative;
+
+      .circle {
+        @include circle(200px, $color-details);
       }
 
-      #line {
-        @include line(5, 200, 0deg, $color-important);
+      .line {
+        @include rectangle(5px, 200px, $color-important);
       }
 
-      #circle2 {
-        @include circle(100, $color-clear-details)
+      .circle2 {
+        @include circle(100px, $color-clear-details)
       }
     }
 
     .texts {
       display: flex;
       flex-direction: column;
-      gap: space(2);
+      gap: space(6);
+    }
+  }
+
+  .about {
+
+    display: flex;
+    flex-direction: column;
+    gap: space(20);
+
+    .rectangle {
+      @include rectangle(70%, 30%, $color-clear-details);
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    .card {
+      padding-top: space(15);
+      padding-left: space(30);
+      padding-right: space(50);
+      padding-bottom: space(20);
+
+      position: relative;
+    }
+
+    img {
+      position: absolute;
+      height: 80%;
+      right: 0;
+      bottom: 50%;
+      transform: translate(20%, 50%);
+    }
+  }
+
+  .main-topic {
+
+    display: flex;
+    flex-direction: column;
+    gap: space(10);
+
+    h2, h3 {
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: space(6);
+
+      .card {
+        align-items: center;
+      }
+
+      h3 {
+        font-family: $font-secondary;
+        font-style: italic;
+      }
+    }
+
+    &::before {
+      content: '';
+      @include rectangle(100%, 90%, $color-clear-details);
+      top: 0;
+      left: 0;
+      z-index: -1;
+      border-top-right-radius: $radius;
+    }
+
+    &::after {
+      content: '';
+      @include rectangle(90%, 100%, $color-clear-details);
+      top: 0;
+      right: 0;
+      z-index: -1;
+      border-bottom-left-radius: $radius;
+      border-top-right-radius: $radius;
+    }
+
+    .circle1 {
+      @include circle(100px, $color-base);
+      top: space(10);
+      left: space(20);
+    }
+
+    .circle2 {
+      @include circle(300px, $color-alt-bg);
+      right: space(-5);
+      top: space(-10);
+    }
+
+    .circle3 {
+      @include circle(60px, $color-details);
+      top: -30px;
+      right: space(60);
+    }
+
+    .line {
+      @include rectangle(400px, 5px, $color-text);
+      right: space(20);
+      top: space(15);
     }
   }
 }

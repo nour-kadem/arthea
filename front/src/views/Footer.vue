@@ -1,9 +1,14 @@
 <script setup lang="ts">
-
+defineProps({
+  margined: {
+    type: Boolean,
+    default: true
+  }
+})
 </script>
 
 <template>
-  <footer>
+  <footer :class="{ margined }">
     <img class="logo" src="../assets/logo.svg" alt="">
     <div class="social-networks">
       <img src="../assets/instagram.svg" alt="">

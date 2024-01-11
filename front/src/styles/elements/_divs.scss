@@ -6,9 +6,21 @@
 }
 
 .card {
-  padding: space(4);
-  background-color: $color-normal;
+  padding: space(6);
+  background-color: $color-base;
   display: flex;
   flex-direction: column;
-  gap: space(2);
+  gap: space(4);
+
+  &.normal {
+    background-color: $color-normal;
+  }
+  
+  &.variant {
+    background-color: $color-clear-details;
+  }
+
+  &.bordered {
+    border: $color-details 3px solid;
+  }
 }
